@@ -1,1 +1,85 @@
-
+{
+    "semesters": [
+        {
+            "number": 1,
+            "courses": [
+                { "code": "UEA-L-UFB-005", "name": "MATEMÁTICA I", "credits": 3, "hours": 64 },
+                { "code": "UEA-L-UFB-027", "name": "FUNDAMENTOS DE PROGRAMACIÓN", "credits": 3, "hours": 64 },
+                { "code": "UEA-L-UFB-029", "name": "FUNDAMENTOS DE TECNOLOGÍAS DE LA INFORMACIÓN", "credits": 3, "hours": 64 },
+                { "code": "UEA-L-UFB-030", "name": "FÍSICA I", "credits": 2, "hours": 32 },
+                { "code": "UEA-L-UFB-019", "name": "REALIDAD NACIONAL", "credits": 1, "hours": 16 }
+            ]
+        },
+        {
+            "number": 2,
+            "courses": [
+                { "code": "UEA-L-UFB-028", "name": "MATEMÁTICA II", "credits": 3, "hours": 64 },
+                { "code": "UEA-L-UFB-033", "name": "ESTRUCTURA DE DATOS", "credits": 3, "hours": 64 },
+                { "code": "UEA-L-UFB-034", "name": "PROGRAMACIÓN ORIENTADA A OBJETOS", "credits": 3, "hours": 64 },
+                { "code": "UEA-L-UFB-035", "name": "FUNDAMENTOS DE SISTEMAS DIGITALES", "credits": 3, "hours": 64 },
+                { "code": "UEA-L-UFB-036", "name": "FÍSICA II", "credits": 3, "hours": 64 }
+            ]
+        },
+        {
+            "number": 3,
+            "courses": [
+                { "code": "UEA-L-UFPTI-001", "name": "SISTEMAS OPERATIVOS", "credits": 3, "hours": 64 },
+                { "code": "UEA-L-UFPTI-002", "name": "BASES DE DATOS", "credits": 3, "hours": 64 },
+                { "code": "UEA-L-UFPTI-003", "name": "REDES DE COMPUTADORAS", "credits": 3, "hours": 64 },
+                { "code": "UEA-L-UFB-037", "name": "ESTADÍSTICA", "credits": 3, "hours": 64 },
+                { "code": "UEA-L-UFB-038", "name": "METODOLOGÍA DE LA INVESTIGACIÓN", "credits": 3, "hours": 64 }
+            ]
+        },
+        {
+            "number": 4,
+            "courses": [
+                { "code": "UEA-L-UFPTI-004", "name": "ADMINISTRACIÓN DE SISTEMAS OPERATIVOS", "credits": 3, "hours": 64 },
+                { "code": "UEA-L-UFPTI-005", "name": "ADMINISTRACIÓN DE BASES DE DATOS", "credits": 3, "hours": 64 },
+                { "code": "UEA-L-UFPTI-006", "name": "TECNOLOGÍAS DE CONMUTACIÓN Y ENRUTAMIENTO", "credits": 3, "hours": 64 },
+                { "code": "UEA-L-UFPTI-007", "name": "INGENIERÍA DE SOFTWARE", "credits": 3, "hours": 64 },
+                { "code": "UEA-L-UFB-010", "name": "REDACCIÓN DE INFORMES TÉCNICOS", "credits": 3, "hours": 64 }
+            ]
+        },
+        {
+            "number": 5,
+            "courses": [
+                { "code": "UEA-L-UFPTI-008", "name": "SISTEMAS EMBEBIDOS", "credits": 3, "hours": 64 },
+                { "code": "UEA-L-UFPTI-009", "name": "APLICACIONES MÓVILES", "credits": 3, "hours": 64 },
+                { "code": "UEA-L-UFPTI-010", "name": "INTERACCIÓN HUMANO - COMPUTADOR", "credits": 3, "hours": 64 },
+                { "code": "UEA-L-UFPTI-011", "name": "SISTEMAS DISTRIBUIDOS", "credits": 3, "hours": 64 },
+                { "code": "UEA-L-UFPTI-012", "name": "DESARROLLO DE APLICACIONES WEB", "credits": 3, "hours": 64 }
+            ]
+        },
+        {
+            "number": 6,
+            "courses": [
+                { "code": "UEA-L-UFPTI-013", "name": "REDES INALÁMBRICAS DE SENSORES", "credits": 3, "hours": 48 },
+                { "code": "UEA-L-UFPTI-014", "name": "ESCALABILIDAD DE REDES", "credits": 3, "hours": 48 },
+                { "code": "UEA-L-UFPTI-015", "name": "SEGURIDAD INFORMÁTICA", "credits": 3, "hours": 48 },
+                { "code": "UEA-L-UFPTI-016", "name": "MINERÍA DE DATOS", "credits": 3, "hours": 48 },
+                { "code": "UEA-L-UFB-021", "name": "PRÁCTICAS DE SERVICIO COMUNITARIO", "credits": 3, "hours": 144 }
+            ]
+        },
+        {
+            "number": 7,
+            "courses": [
+                { "code": "UEA-L-UFPTI-017", "name": "GESTIÓN Y GOBIERNO DE TI", "credits": 3, "hours": 48 },
+                { "code": "UEA-L-UFPTI-018", "name": "LEGISLACIÓN INFORMÁTICA", "credits": 3, "hours": 48 },
+                { "code": "UEA-L-UFPTI-019", "name": "DEONTOLOGÍA DE LA PRAXIS PROFESIONAL", "credits": 3, "hours": 48 },
+                { "code": "UEA-L-UTTI-001", "name": "PRÁCTICAS LABORALES I", "credits": 4, "hours": 144 },
+                { "code": "UEA-L-UFB-031", "name": "EMPRENDIMIENTO", "credits": 2, "hours": 32 }
+            ]
+        },
+        {
+            "number": 8,
+            "courses": [
+                { "code": "UEA-L-UTTI-002", "name": "GESTIÓN DE PROYECTO TI", "credits": 3, "hours": 64 },
+                { "code": "UEA-L-UTTI-003", "name": "REDACCIÓN CIENTÍFICA", "credits": 3, "hours": 64 },
+                { "code": "UEA-L-UTTI-004", "name": "PRÁCTICAS LABORALES II", "credits": 6, "hours": 240 },
+                { "code": "UEA-L-UFB-006", "name": "INSTALACIONES ELÉCTRICAS Y DE CABLEADO ESTRUCTURADO", "credits": 1, "hours": 16 }
+            ]
+        }
+    ],
+    "totalCredits": 120,
+    "totalHours": 5760
+}
