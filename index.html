@@ -1,16 +1,38 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Malla Curricular TI</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malla Curricular - Ingeniería en TI</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-  <h1>Malla Curricular - Tecnologías de la Información</h1>
-  <div id="malla"></div>
-  <p>Progreso: <span id="progreso">0%</span></p>
-  <script src="script.js"></script>
+    <header>
+        <h1>Malla Curricular - Ingeniería en Tecnologías de la Información</h1>
+        <div class="progress-container">
+            <div class="progress-bar" id="progress-bar">
+                <div class="progress-fill" id="progress-fill"></div>
+            </div>
+            <span id="progress-text">0% completado</span>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="semesters-container">
+            <!-- Los semestres se generarán dinámicamente con JavaScript -->
+        </div>
+
+        <div class="chart-container">
+            <canvas id="progress-chart"></canvas>
+        </div>
+    </div>
+
+    <div class="controls">
+        <button id="save-btn">Guardar Progreso</button>
+        <button id="reset-btn">Reiniciar</button>
+    </div>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
-
