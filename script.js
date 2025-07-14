@@ -1,3 +1,97 @@
+// Datos por defecto (en caso de que falle la carga del JSON)
+const defaultData = {
+    semesters: [
+        {
+            number: 1,
+            courses: [
+                { code: "UEA-L-UFB-005", name: "MATEMÁTICA I", credits: 3, hours: 64 },
+                { code: "UEA-L-UFB-027", name: "FUNDAMENTOS DE PROGRAMACIÓN", credits: 3, hours: 64 },
+                { code: "UEA-L-UFB-029", name: "FUNDAMENTOS DE TECNOLOGÍAS DE LA INFORMACIÓN", credits: 3, hours: 64 },
+                { code: "UEA-L-UFB-030", name: "FÍSICA I", credits: 2, hours: 32 },
+                { code: "UEA-L-UFB-019", name: "REALIDAD NACIONAL", credits: 1, hours: 16 }
+            ]
+        },
+        // ... (otros semestres como en el ejemplo anterior)
+    ],
+    totalCredits: 120,
+    totalHours: 5760
+};
+
+// Variables globales
+let mallaData = null;
+let completedCourses = JSON.parse(localStorage.getItem('completedCourses')) || [];
+let progressChart = null;
+
+// Función principal que se ejecuta al cargar la página
+document.addEventListener('DOMContentLoaded', async function() {
+    try {
+        // Intentar cargar el JSON externo
+        const response = await fetch('./data/malla.json');
+        if (!response.ok) throw new Error('Error al cargar JSON');
+        mallaData = await response.json();
+    } catch (error) {
+        console.error('Usando datos por defecto:', error);
+        mallaData = defaultData;
+    }
+    
+    // Inicializar la aplicación
+    initApp();
+});
+
+function initApp() {
+    renderSemesters();
+    renderProgressChart();
+    updateProgress();
+
+    // Event listeners
+    document.getElementById('save-btn').addEventListener('click', saveProgress);
+    document.getElementById('reset-btn').addEventListener('click', resetProgress);
+}
+
+// Función para renderizar los semestres
+function renderSemesters() {
+    const container = document.getElementById('semesters-container');
+    container.innerHTML = '';
+
+    mallaData.semesters.forEach(semester => {
+        const semesterElement = document.createElement('div');
+        semesterElement.className = 'semester';
+
+        const header = document.createElement('div');
+        header.className = 'semester-header';
+        header.textContent = `Semestre ${semester.number}`;
+
+        const coursesList = document.createElement('div');
+        coursesList.className = 'courses-list';
+
+        semester.courses.forEach(course => {
+            const courseElement = document.createElement('div');
+            courseElement.className = 'course';
+            if (completedCourses.includes(course.code)) {
+                courseElement.classList.add('completed');
+            }
+
+            courseElement.innerHTML = `
+                ${course.name}
+                <span class="course-credits">${course.credits} créditos</span>
+            `;
+
+            courseElement.addEventListener('click', () => {
+                toggleCourseCompletion(course.code);
+            });
+
+            coursesList.appendChild(courseElement);
+        });
+
+        semesterElement.appendChild(header);
+        semesterElement.appendChild(coursesList);
+        container.appendChild(semesterElement);
+    });
+}
+
+// Resto de las funciones (toggleCourseCompletion, calculateProgress, updateProgress, 
+// renderProgressChart, updateChart, saveProgress, resetProgress) se mantienen igual
+// que en la implementación anterior, pero usando mallaData en lugar de los datos fijos
 // Datos de la malla curricular (simplificados)
 const mallaData = {
     semesters: [
@@ -298,3 +392,4 @@ function resetProgress() {
         updateChart();
     }
 }
+
